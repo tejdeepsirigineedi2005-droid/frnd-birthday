@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Birthday Surprise ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background Slideshow -->
+    <div class="background-slideshow">
+        <div class="slide slide1"></div>
+        <div class="slide slide2"></div>
+        <div class="slide slide3"></div>
+    </div>
+
+    <!-- Dark Overlay -->
+    <div class="overlay"></div>
+
+    <!-- MUSIC -->
+    <audio id="birthdaySong" loop>
+        <source src="assets/birthday-song.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- PAGE 1 -->
+    <section id="namePage" class="page active">
+
+        <div class="glass-card">
+
+            <div class="emoji">🎂</div>
+
+            <h1>Heyyy! ❤️</h1>
+
+            <p>I have a special birthday surprise for you...</p>
+
+            <p class="small-text">
+                First, tell me your name 😊
+            </p>
+
+            <input
+                type="text"
+                id="nameInput"
+                placeholder="Enter your name..."
+                autocomplete="off"
+            >
+
+            <button onclick="startBirthday()">
+                Continue ❤️
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- PAGE 2 -->
+    <section id="welcomePage" class="page">
+
+        <div class="content">
+
+            <div class="floating-hearts">
+                ❤️ 💕 ❤️ 💕 ❤️
+            </div>
+
+            <h1>
+                Happy Birthday
+            </h1>
+
+            <h2 id="userName">
+                Name Garu
+            </h2>
+
+            <p class="birthday-text">
+                🎉 Wishing you a beautiful day filled with
+                happiness, smiles and unforgettable memories! 🎉
+            </p>
+
+            <button onclick="showSurprise()">
+                🎁 I Have A Surprise For You
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- PAGE 3 -->
+    <section id="surprisePage" class="page">
+
+        <div class="surprise-box">
+
+            <div class="gift">🎁</div>
+
+            <h1>Waittt... 😍</h1>
+
+            <p>
+                Something special is waiting for you...
+            </p>
+
+            <button onclick="openGift()">
+                OPEN SURPRISE ✨
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- PAGE 4 CAKE -->
+    <section id="cakePage" class="page">
+
+        <div class="cake-container">
+
+            <h1>
+                Make A Wish, <span id="cakeName"></span> ❤️
+            </h1>
+
+            <p>
+                It's time to cut the cake! 🎂
+            </p>
+
+            <!-- Cake -->
+            <div class="cake">
+
+                <div class="candle">
+
+                    <div class="flame"></div>
+
+                </div>
+
+                <div class="cream"></div>
+
+                <div class="cake-top"></div>
+
+                <div class="cake-body"></div>
+
+            </div>
+
+            <button id="cutButton" onclick="cutCake()">
+                🔪 CUT THE CAKE 🎂
+            </button>
+
+            <div id="cakeMessage" class="hidden-message">
+                🎉 YAYYYY!!! 🎉
+                <br>
+                Cake Cut Successfully ❤️
+            </div>
+
+            <button
+                id="nextButton"
+                class="hidden"
+                onclick="showFinalWish()"
+            >
+                Continue ❤️
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- PAGE 5 -->
+    <section id="wishPage" class="page">
+
+        <div class="wish-container">
+
+            <div class="confetti">🎊</div>
+
+            <h1>
+                Happy Birthday
+            </h1>
+
+            <h2 id="finalName"></h2>
+
+            <p>
+                May your life always be filled with
+                happiness, love, success and lots of smiles. ❤️
+            </p>
+
+            <p class="special">
+                Keep smiling... 😊
+                <br>
+                Keep shining... ✨
+                <br>
+                And always stay awesome! 💕
+            </p>
+
+            <button onclick="showGoodbye()">
+                One Last Thing 💌
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- PAGE 6 GOODBYE -->
+    <section id="goodbyePage" class="page">
+
+        <div class="goodbye">
+
+            <div class="bye-bouquet">
+                
+            </div>
+
+            <h1>
+                Byeee
+            </h1>
+
+            <h2 id="byeName"></h2>
+
+            <p>
+                Once Again...
+            </p>
+
+            <h3>
+                HAPPY BIRTHDAY 🎂🎉
+            </h3>
+
+            <p>
+                Have a beautiful year ahead! ✨
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- PARTICLES -->
+    <div id="particles"></div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
